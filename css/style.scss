@@ -1,0 +1,264 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// Variables
+
+$systemFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$ferrariYellow: #FFF200;
+$ferrariRed: #ba1307;
+$darkRed: #660000;
+$darkRedGradient: linear-gradient(0deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
+
+html {
+    font-family: $systemFont;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+
+    body {
+        header {
+            align-items: center;
+            background: $ferrariRed;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            height: 50px;
+            padding-left: 10%;
+            padding-right: 10%;
+            position: relative;
+
+            #menu {
+                display: none;
+            }
+
+            #menuBtn {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 2rem;
+                padding: 0;
+                position: absolute;
+                right: 50px;
+                top: 0;
+            }
+
+            #mobileMenu {
+                background: $ferrariRed;
+                display: none;
+                flex-direction: column;
+                gap: 20px;
+                right: 0;
+                padding: 20px;
+                position: absolute;
+                top: 50px;
+            }
+
+            nav {
+                a {
+                    align-items: center;
+                    color: white;
+                    display: flex;
+                    height: 50px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        main {
+            #hero {
+                align-items: center;
+                background: $darkRedGradient;
+                display: flex;
+                justify-content: center;
+                height: 90vh;
+
+                h1 {
+                    color: white;
+                    font-size: 4rem;
+                    font-weight: 700;
+                }
+            }
+
+            #history {
+                background: black;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                line-height: 1.5;
+                padding-left: 10%;
+                padding-right: 10%;
+                text-align: justify;
+
+                h2 {
+                    border-bottom: 1px solid white;
+                    font-size: 2rem;
+                    font-weight: 500;
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 750px) {
+    html {
+        body {
+            header {
+                #menu {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 50px;
+
+                    a {
+                        &:hover {
+                            background: $ferrariYellow;
+                            color: black;
+                        }
+                    }
+                }
+
+                #menuBtn {
+                    display: none;
+                }
+
+                #mobileMenu {
+                    display: none;
+                }
+            }
+        }
+    }
+}

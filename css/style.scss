@@ -138,16 +138,27 @@ $ferrariRed: #ba1307;
 $darkRed: #660000;
 $darkRedGradient: linear-gradient(0deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
 
+// General
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+// Mobile
+
 html {
     font-family: $systemFont;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    scroll-behavior: smooth;
 
     body {
         header {
             align-items: center;
             background: $ferrariRed;
+            box-shadow: 0px 0px 5px 2px #660000;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -155,7 +166,13 @@ html {
             height: 50px;
             padding-left: 10%;
             padding-right: 10%;
-            position: relative;
+            position: fixed;
+            width: 80%;
+
+            #logo {
+                height: 25px;
+                width: 100px;
+            }
 
             #menu {
                 display: none;
@@ -174,6 +191,7 @@ html {
 
             #mobileMenu {
                 background: $ferrariRed;
+                box-shadow: 0px 6px 5px 2px #660000;
                 display: none;
                 flex-direction: column;
                 gap: 20px;
@@ -214,9 +232,6 @@ html {
             #history {
                 background: black;
                 color: white;
-                display: flex;
-                flex-direction: column;
-                gap: 30px;
                 line-height: 1.5;
                 padding-left: 10%;
                 padding-right: 10%;
@@ -226,7 +241,28 @@ html {
                     border-bottom: 1px solid white;
                     font-size: 2rem;
                     font-weight: 500;
+                    margin-bottom: 50px;
                     width: fit-content;
+                }
+
+                .imageDiv {
+                    align-items: center;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 5%;
+
+                    img {
+                        border: 5px solid white;
+                        height: auto;
+                        max-width: 500px;
+                    }
+                }
+
+                .textDiv {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    margin-top: 30px;
                 }
             }
         }

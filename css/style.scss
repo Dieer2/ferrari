@@ -135,14 +135,40 @@ $systemFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, A
 
 $ferrariYellow: #FFF200;
 $ferrariRed: #ba1307;
+$ferrariGreen: #00A551;
 $darkRed: #660000;
 $darkRedGradient: linear-gradient(0deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
+$blackYellowGradient: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(255, 242, 0, 1) 100%);
 
 // General
 
 img {
     height: auto;
     width: 100%;
+}
+
+h2 {
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 100px;
+    width: fit-content;
+}
+
+#toTop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    background: #660000;
+    border-radius: 50%;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-bottom: 13px;
+    box-shadow: 0px 0px 5px 1px grey;
 }
 
 // Mobile
@@ -155,6 +181,8 @@ html {
     scroll-behavior: smooth;
 
     body {
+        background: linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(255, 242, 0, 1) 100%);
+
         header {
             align-items: center;
             background: $ferrariRed;
@@ -215,9 +243,12 @@ html {
         }
 
         main {
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+
             #hero {
                 align-items: center;
-                background: $darkRedGradient;
                 display: flex;
                 justify-content: center;
                 height: 90vh;
@@ -230,31 +261,31 @@ html {
             }
 
             #history {
-                background: black;
                 color: white;
                 line-height: 1.5;
                 padding-left: 10%;
                 padding-right: 10%;
                 text-align: justify;
 
-                h2 {
-                    border-bottom: 1px solid white;
-                    font-size: 2rem;
-                    font-weight: 500;
-                    margin-bottom: 50px;
-                    width: fit-content;
-                }
-
                 .imageDiv {
                     align-items: center;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 5%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
 
                     img {
                         border: 5px solid white;
+                        box-shadow: 0px 0px 5px 0px black;
                         height: auto;
+                        margin-top: 5%;
+                        margin-bottom: 5%;
                         max-width: 500px;
+                    }
+
+                    p {
+                        flex-basis: min-content;
+                        flex-grow: 1;
                     }
                 }
 
@@ -263,6 +294,44 @@ html {
                     flex-direction: column;
                     gap: 30px;
                     margin-top: 30px;
+                }
+            }
+
+            #models {
+                line-height: 1.5;
+                margin-bottom: 100px;
+                padding-left: 10%;
+                padding-right: 10%;
+
+                #modelContainer {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 10px;
+                    margin-top: 5%;
+
+                    figure {
+                        background: $ferrariRed;
+                        border: 5px solid white;
+                        box-shadow: 0px 0px 5px 0px grey;
+                        height: 300px;
+                        max-width: 300px;
+
+                        img {
+                            height: auto;
+                            max-width: 300px;
+                        }
+
+                        figcaption {
+                            padding: 10px;
+
+                            h3 {
+                                color: white;
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -293,6 +362,20 @@ html {
 
                 #mobileMenu {
                     display: none;
+                }
+            }
+
+            main {
+                #history {
+                    .imageDiv {
+                        .leftImg {
+                            margin-right: 5%;
+                        }
+
+                        .rightImg {
+                            margin-left: 5%;
+                        }
+                    }
                 }
             }
         }

@@ -13,20 +13,19 @@
 </head>
 
 <body>
+    <a href="#" id="toTop" title="Az oldal tetejére ugrás">&#8911;</a>
     <header>
         <img alt="A Ferrari logo" id="logo" height="25" src="img/logo.svg" width="100">
         <nav id="menu">
-            <a href="#">Főoldal</a>
-            <a href="#history">Történelem</a>
-            <a href="#models">Modellek</a>
-            <a href="#">Galéria</a>
+            <a href="#" title="Főoldal">Főoldal</a>
+            <a href="#history" title="Történelem">Történelem</a>
+            <a href="#models" title="Modellek">Modellek</a>
         </nav>
         <button id="menuBtn" type="button">&#9776;</button>
         <nav id="mobileMenu">
-            <a href="#">Főoldal</a>
-            <a href="#history">Történelem</a>
-            <a href="#models">Modellek</a>
-            <a href="#">Galéria</a>
+            <a href="#" title="Főoldal">Főoldal</a>
+            <a href="#history" title="Történelem">Történelem</a>
+            <a href="#models" title="Modellek">Modellek</a>
         </nav>
     </header>
     <main>
@@ -36,7 +35,7 @@
         <section id="history">
             <h2>A Ferrari történelme</h2>
             <div class="imageDiv">
-                <img alt="Enzo Ferrari a saját Ferrariában" height="350" src="img/history1.webp"
+                <img alt="Enzo Ferrari a saját Ferrariában" class="leftImg" height="350" src="img/history1.webp"
                     srcset="img/history1_2x.webp 2x" width="500">
                 <p>A Ferrari az olasz autóipar egyik leghíresebb márkája, amely több mint 70 éves történelmével a világ
                     egyik legismertebb és legelismertebb autómárkájává vált. A Ferrari története az 1940-es évek végén
@@ -52,12 +51,12 @@
                     Forma-1-es versenyt megnyert. Az 1960-as években a Ferrari megkezdte a nagy szériás autók gyártását,
                     amelyeket a világ leggazdagabb és legbefolyásosabb emberei vásároltak meg.
                 </p>
-                <img alt="Ferrari 125 s képe" height="350" src="img/history2.webp" srcset="img/history2_2x.webp 2x"
-                    width="500">
+                <img alt="Ferrari 125 s képe" height="350" class="rightImg" src="img/history2.webp"
+                    srcset="img/history2_2x.webp 2x" width="500">
             </div>
             <div class="imageDiv">
-                <img alt="Niki Lauda és Ferraria" height="350" src="img/history3.webp" srcset="img/history3_2x.webp 2x"
-                    width="500">
+                <img alt="Niki Lauda és Ferraria" height="350" class="leftImg" src="img/history3.webp"
+                    srcset="img/history3_2x.webp 2x" width="500">
                 <p>Az 1970-es években a Ferrari a luxusautók piacán is megjelent, és a márka autói olyan hírességek
                     kezébe
                     kerültek, mint Steve McQueen vagy Elton John. Az 1980-as években a Ferrari tovább bővítette a
@@ -81,11 +80,58 @@
         </section>
         <section id="models">
             <h2>Modellek</h2>
+            <div id="modelContainer">
+                <figure>
+                    <img alt="Ferrari 296 GTB képe" height="150" src="img/296_gtb.webp" srcset="img/296_gtb_2x.webp 2x"
+                        width="300">
+                    <figcaption>
+                        <h3>296 GTB</h3>
+                        <h3>296 GTS</h3>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img alt="Ferrari F8 Spider képe" height="150" src="img/f8_spider.webp"
+                        srcset="img/f8_spider_2x.webp 2x" width="300">
+                    <figcaption>
+                        <h3>F8 Tributo</h3>
+                        <h3>F8 Spider</h3>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img alt="Ferrari Portofino M képe" height="150" src="img/portofino_m.webp"
+                        srcset="img/portofino_m_2x.webp 2x" width="300">
+                    <figcaption>
+                        <h3>Portofino M</h3>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img alt="Ferrari 812 Superfast képe" height="150" src="img/812_superfast.webp"
+                        srcset="img/812_superfast_2x.webp 2x" width="300">
+                    <figcaption>
+                        <h3>812 Superfast</h3>
+                        <h3>812 GTS</h3>
+                        <h3>812 Competizione</h3>
+                        <h3>812 Competizione A</h3>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img alt="Ferrari SF90 Spider képe" height="150" src="img/sf90.webp" srcset="img/sf90_2x.webp 2x"
+                        width="300">
+                    <figcaption>
+                        <h3>SF90 Stradale</h3>
+                        <h3>SF90 Spider</h3>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img alt="Ferrari Roma képe" height="150" src="img/roma.webp" srcset="img/roma_2x.webp 2x"
+                        width="300">
+                    <figcaption>
+                        <h3>Roma</h3>
+                    </figcaption>
+                </figure>
+            </div>
         </section>
     </main>
-    <footer>
-
-    </footer>
 </body>
 
 </html>

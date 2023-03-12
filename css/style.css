@@ -134,6 +134,31 @@ img {
   width: 100%;
 }
 
+h2 {
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 100px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#toTop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  background: #660000;
+  border-radius: 50%;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-bottom: 13px;
+  box-shadow: 0px 0px 5px 1px grey;
+}
+
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
@@ -141,6 +166,9 @@ html {
   -moz-text-size-adjust: 100%;
        text-size-adjust: 100%;
   scroll-behavior: smooth;
+}
+html body {
+  background: linear-gradient(180deg, rgb(255, 0, 0) 0%, rgb(0, 0, 0) 50%, rgb(255, 242, 0) 100%);
 }
 html body header {
   align-items: center;
@@ -193,9 +221,13 @@ html body header nav a {
   padding-right: 10px;
   text-decoration: none;
 }
+html body main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
 html body main #hero {
   align-items: center;
-  background: linear-gradient(0deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
   display: flex;
   justify-content: center;
   height: 90vh;
@@ -206,37 +238,68 @@ html body main #hero h1 {
   font-weight: 700;
 }
 html body main #history {
-  background: black;
   color: white;
   line-height: 1.5;
   padding-left: 10%;
   padding-right: 10%;
   text-align: justify;
 }
-html body main #history h2 {
-  border-bottom: 1px solid white;
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 50px;
-  width: -moz-fit-content;
-  width: fit-content;
-}
 html body main #history .imageDiv {
   align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 html body main #history .imageDiv img {
   border: 5px solid white;
+  box-shadow: 0px 0px 5px 0px black;
   height: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
   max-width: 500px;
+}
+html body main #history .imageDiv p {
+  flex-basis: min-content;
+  flex-grow: 1;
 }
 html body main #history .textDiv {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-top: 30px;
+}
+html body main #models {
+  line-height: 1.5;
+  margin-bottom: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+html body main #models #modelContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5%;
+}
+html body main #models #modelContainer figure {
+  background: #ba1307;
+  border: 5px solid white;
+  box-shadow: 0px 0px 5px 0px grey;
+  height: 300px;
+  max-width: 300px;
+}
+html body main #models #modelContainer figure img {
+  height: auto;
+  max-width: 300px;
+}
+html body main #models #modelContainer figure figcaption {
+  padding: 10px;
+}
+html body main #models #modelContainer figure figcaption h3 {
+  color: white;
+  font-size: 1.1rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -255,5 +318,11 @@ html body main #history .textDiv {
   }
   html body header #mobileMenu {
     display: none;
+  }
+  html body main #history .imageDiv .leftImg {
+    margin-right: 5%;
+  }
+  html body main #history .imageDiv .rightImg {
+    margin-left: 5%;
   }
 }/*# sourceMappingURL=style.css.map */
